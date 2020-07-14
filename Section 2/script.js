@@ -470,7 +470,7 @@ console.log(john);
  * Lecture nr. 27
  * Coding challenge 4
  */ 
-
+/*
  var john = {
      name: 'John Smith',
      mass: 90,
@@ -502,3 +502,127 @@ console.log(john);
  }else{
      console.log('They have the same BMI');
  }
+*/
+
+ /***************
+ * Lecture nr. 29
+ * Loops and iteration
+ */ 
+/*
+ //for loop
+ for(var i = 1; i <= 20; i++){
+     console.log(i);
+ }
+
+ var john = ['John', 'Smith', 1990, 'teacher', false];
+
+ for(var i = 0; i < john.length; i++){
+     console.log(john[i]);
+ }
+
+
+ //while loop
+var i = 0;
+ while(i < john.length){
+     console.log(john[i]);
+     i++;
+ }
+ //Continue snd break statements
+ var john = ['John', 'Smith', 1990, 'teacher', false,'blue'];
+ for(var i = 0; i < john.length; i++){
+     if(typeof john[i] !== 'string') continue;
+     console.log(john[i]);
+ }
+console.log('');
+
+ for(var i = 0; i < john.length; i++){
+    if(typeof john[i] !== 'string') break;
+    console.log(john[i]);
+}
+
+//Looping backwards
+for(var i = john.length-1; i > -1; i--){
+    console.log(john[i]);
+}
+*/
+
+/***************
+ * Lecture nr. 30
+ * Coding Challenge 5
+ */ 
+/*
+ //part 1
+ var johnFamily = {
+     bill: [124, 48, 268, 180, 42],
+     tip1: 0.2,
+     tip2: 0.15,
+     tip3: 0.1,
+     tips: [],
+     fullBill: [],
+     tipCalculator: function(){
+        for(var i = 0; i < this.bill.length; i++){
+            if(this.bill[i] < 50){
+                this.tips[i] = this.bill[i]*this.tip1;
+                this.fullBill[i] = this.tips[i] + this.bill[i];
+            }else if(this.bill[i] >= 50 && this.bill[i] < 200){
+                this.tips[i] = this.bill[i]*this.tip2;
+                this.fullBill[i] = this.tips[i] + this.bill[i];
+            }else if(this.bill[i] >= 200){
+                this.tips[i] = this.bill[i]*this.tip3;
+                this.fullBill[i] = this.tips[i] + this.bill[i];
+            }
+        }
+     }
+ }
+
+ johnFamily.tipCalculator();
+ console.log(johnFamily);
+
+ //part 2
+ var markFamily = {
+    bill: [77, 375, 110, 45],
+    tip1: 0.2,
+    tip2: 0.10,
+    tip3: 0.25,
+    tips: [],
+    fullBill: [],
+    tipCalculator: function(){ 
+       for(var i = 0; i < this.bill.length; i++){
+           if(this.bill[i] < 100){
+               this.tips[i] = this.bill[i]*this.tip1;
+               this.fullBill[i] = this.tips[i] + this.bill[i];
+           }else if(this.bill[i] >= 100 && this.bill[i] < 300){
+               this.tips[i] = this.bill[i]*this.tip2;
+               this.fullBill[i] = this.tips[i] + this.bill[i];
+           }else if(this.bill[i] >= 300){
+               this.tips[i] = this.bill[i]*this.tip3;
+               this.fullBill[i] = this.tips[i] + this.bill[i];
+           }
+       }
+    }
+}
+
+markFamily.tipCalculator();
+ console.log(markFamily);
+
+ function averageTip(tips){
+    var count = 0;
+    var allMoney = 0;
+    for(var i = 0; i < tips.length; i++){
+        allMoney += tips[i];
+        count++;
+    }
+    return allMoney/count;
+ }
+
+ markTips = averageTip(markFamily.tips);
+ johnTips = averageTip(johnFamily.tips);
+
+ if(markTips > johnTips){
+     console.log('Mark\'s family tips more. They tip on average ' + markTips);
+ }else if(markTips < johnTips){
+    console.log('john\'s family tips more. They tip on average ' + markTips);
+}else{
+     console.log('same amount tipt ' + markTips, johnTips);
+ }
+ */
