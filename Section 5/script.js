@@ -155,7 +155,7 @@ console.log(obj.city);
 /*
 Fyrirlestur 65 ***********************
 Creating Objects: Passing functions as Arguments
-*/
+
 
 var years = [1990, 1965, 1937, 2005, 1999];
 
@@ -192,6 +192,54 @@ console.log(fullAges);
 
 var rates = arrayCalc(ages, maxHeartRate);
 console.log(rates);
+
+*/
+
+/*
+Fyrirlestur 66 ***********************
+Furst Class Functions: Functions Returning Functions
+
+
+function interviewQuestion(job){
+    if(job === 'designer'){
+        return function(name){
+            console.log(name + ', can you please explain what UX design is?');
+        }
+    }else if(job === 'teacher'){
+        return function(name){
+            console.log('What subject do you teach, ' + name + '?');
+        }
+    }else{
+        return function(name){
+            console.log('Hello ' + name + ', what do you do?');
+        }
+    }
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+teacherQuestion('John');
+
+var designerQuestion = interviewQuestion('designer');
+designerQuestion('John');
+designerQuestion('Mike');
+designerQuestion('Bill');
+designerQuestion('Jane');
+
+interviewQuestion('teacher')('Adam');
+*/
+
+
+/*
+Fyrirlestur 67 ***********************
+Immediately Invoke Function Expressions (IIFE)
+*/
+
+
+
+
+
+
+
 
 
 
